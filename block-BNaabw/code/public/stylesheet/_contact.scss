@@ -1,0 +1,91 @@
+.contact-us {
+  height: 75vh;
+  padding: 6rem 0;
+  text-align: center;
+  & > p {
+    color: $text-color;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .contact-details {
+    margin: 3rem 0;
+    h5 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: 500;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .fas-block {
+    background-color: #f2f2f2;
+
+    border-radius: 50%;
+    display: inline-block;
+    padding: 2rem;
+  }
+  .fas {
+    font-size: 2.5rem;
+    color: $primary-color;
+  }
+}
+
+// address
+
+.address {
+  //   height: 90vh;
+  text-align: center;
+  padding: 4rem 0;
+  h5 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  h5 + p {
+    color: $text-color;
+    margin: 1.5rem auto 4rem auto;
+    width: 60%;
+  }
+  iframe {
+    width: 100%;
+    height: 45vh;
+  }
+  form {
+    padding: 1rem;
+  }
+  input {
+    width: 100%;
+    outline: none;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid rgba($text-color, 0.3);
+    border-radius: 0.5rem;
+    &::placeholder {
+      font-size: 1rem;
+      color: rgba($text-color, 0.8);
+      text-transform: uppercase;
+    }
+  }
+  textarea {
+    outline: none;
+    border: 2px solid rgba($text-color, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    &::placeholder {
+      font-size: 1rem;
+      color: rgba($text-color, 0.8);
+      text-transform: uppercase;
+    }
+  }
+
+  .btn {
+    padding: 1rem 1.5rem;
+    border-radius: 2.5rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
