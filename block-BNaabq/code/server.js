@@ -1,13 +1,15 @@
 var express = require('express');
 var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
 var app = express();
 app.use(cookieParser());
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + `/public`));
 
-app.use((req, res, next) => {
+app.use('/about', (req, res, next) => {
   console.log(req.cookies);
   res.cookie('username', 'Abhishek');
   var count = req.cookies.count;
@@ -20,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/about', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Welcome cookies');
 });
 
