@@ -1,0 +1,104 @@
+.service-business {
+  height: 80vh;
+  img {
+    width: 100%;
+  }
+  h6 {
+    color: $primary-color;
+    text-align: left;
+    font-weight: 500;
+  }
+  p {
+    color: $text-color;
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+}
+// product
+
+.product {
+  padding: 3rem 0;
+  margin: 3rem 0;
+  h3 {
+    font-weight: 700;
+    text-align: center;
+  }
+  p {
+    color: $text-color;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  img {
+    width: 20%;
+    margin: 2rem 0;
+  }
+  h6 + p {
+    text-align: left;
+    color: rgb(56, 51, 51);
+  }
+  h6 {
+    font-weight: 600;
+  }
+  .product-rows {
+    padding: 2rem 0;
+    margin: 1rem 0;
+    border-bottom: 1px solid rgba($text-color, 0.2);
+  }
+  .product-rows1 {
+    padding: 2rem 0;
+  }
+}
+
+// deal
+
+.deal {
+  background-color: $primary-color;
+  padding: 3rem 0;
+  color: white;
+  h6 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: white;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(white, 0.6);
+  }
+  h6 + p {
+    padding-left: 2rem;
+  }
+  .btn {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid white;
+    color: white;
+    border-radius: 2rem;
+  }
+}
+
+// award
+
+.award {
+  padding: 3rem 0;
+  margin: 2rem 0;
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  h3 + p {
+    text-align: center;
+    width: 60%;
+    margin: 1rem auto 3rem auto;
+    color: $text-color;
+  }
+  img {
+    width: 100%;
+  }
+  h5 {
+    margin: 1.5rem 0;
+  }
+  h5 + p {
+    color: $text-color;
+  }
+  .award-variation {
+    padding: 3rem 0;
+    text-align: center;
+  }
+}

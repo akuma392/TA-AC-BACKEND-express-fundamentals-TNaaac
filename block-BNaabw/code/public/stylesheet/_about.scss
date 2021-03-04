@@ -1,0 +1,98 @@
+// hero
+.about-hero {
+  height: 30vh;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  h3 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+// about us
+
+.about-us {
+  height: 80vh;
+  img {
+    width: 80%;
+  }
+  h6 {
+    color: $primary-color;
+    text-align: left;
+    font-weight: 500;
+  }
+  p {
+    color: $text-color;
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+}
+
+// vision
+
+.vision {
+  img {
+    width: 70%;
+  }
+  .fas {
+    font-size: 3.5rem;
+    color: $heading-color;
+    flex: 0 1 20%;
+  }
+  .vision-block {
+    margin-bottom: 3rem;
+    padding: 1rem;
+  }
+  h6 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  p {
+    color: $text-color;
+  }
+}
+
+// team
+
+.team {
+  height: 100vh;
+  text-align: center;
+  h3 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  h3 + p {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .team-details {
+    margin-top: 3rem;
+    img {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    img + p {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    span {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// solutions
+
+.about-solutions {
+  .btn {
+    @extend %btn;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.5rem 1.5rem;
+  }
+}

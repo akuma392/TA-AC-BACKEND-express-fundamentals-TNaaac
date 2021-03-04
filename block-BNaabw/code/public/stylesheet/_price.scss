@@ -1,0 +1,75 @@
+.price-section {
+  padding: 6rem 0;
+  text-align: center;
+  & > p {
+    color: $text-color;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.price {
+  padding: 2rem 0;
+  margin: 3rem 0;
+  border: 1px solid rgba($text-color, 0.2);
+  box-shadow: 1px 1px 3px rgba($text-color, 0.4);
+  border-radius: 0.5rem;
+  h2 + p {
+    color: $text-color;
+    margin-top: 1rem;
+  }
+  legend {
+    margin: 3rem 0 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .btn {
+    @extend %btn;
+  }
+}
+
+.price-list {
+  margin-bottom: 3rem;
+  li {
+    margin: 1rem 0;
+  }
+}
+.price-list li::before {
+  content: "-";
+}
+
+// faqs
+
+.FAQs {
+  padding: 3rem 0;
+  text-align: center;
+  h3 {
+    font-weight: 700;
+  }
+  h3 + p {
+    color: $text-color;
+    margin: 2rem 0 4rem 0;
+  }
+  .flex-48 {
+    flex: 0 1 49%;
+  }
+  .question {
+    border: 1px solid rgba($text-color, 0.2);
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    &:hover {
+      background-color: rgba($text-color, 0.1);
+      cursor: pointer;
+    }
+  }
+  h6 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+  }
+  h6 + p {
+    color: $text-color;
+  }
+}
