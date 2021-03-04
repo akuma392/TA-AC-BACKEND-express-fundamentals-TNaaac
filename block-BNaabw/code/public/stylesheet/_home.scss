@@ -1,0 +1,270 @@
+.header-social-link {
+  background-color: $primary-color;
+  padding: 0.75rem 0;
+}
+.header-social-link span {
+  color: white;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+
+.header-social-link .fab {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+// header-menu
+.header-menu {
+  background-color: #f2f2f2;
+  // padding: 0.8rem 0;
+}
+.header-menu h6 {
+  color: $primary-color;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+.header-menu h6 > span {
+  color: black;
+  text-transform: uppercase;
+}
+.header-sub-menu li {
+  padding: 1.5rem 0;
+}
+.header-sub-menu a:nth-child(n) {
+  color: black;
+  font-weight: 500;
+  //   margin-left: 1.5rem;
+  font-size: 1.2rem;
+  padding: 1.7rem 0.75rem;
+  text-align: center;
+  &:hover {
+    background-color: $btn-color;
+
+    color: white;
+  }
+}
+.active {
+  background-color: $btn-color;
+  padding: 1rem;
+  text-align: center;
+}
+.sub-menu-bar {
+  position: relative;
+
+  .sub-menu {
+    position: absolute;
+    width: 12rem;
+    background-color: #f2f2f2;
+
+    top: 4.5rem;
+    transform: translateX(-50%);
+    padding: 0.8rem;
+    text-align: left;
+    display: none;
+    li {
+      margin: 1rem 0;
+      padding: 0;
+    }
+  }
+}
+.sub-menu-bar:hover .sub-menu {
+  display: inline-block;
+}
+
+.sub-menu a:nth-child(n) {
+  &:hover {
+    background-color: #f2f2f2;
+    color: black;
+  }
+}
+
+// hero section
+
+.hero {
+  background: url("../assets/media/banner-1.jpg") no-repeat;
+  background-position: 80% 80%;
+  background-size: cover;
+  max-width: 100vw;
+  margin-bottom: 1.5rem;
+  height: 93vh;
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    width: 60%;
+    color: $heading-color;
+  }
+  p {
+    color: $heading-color;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0 2rem 0;
+  }
+  .btn {
+    background-color: $primary-color;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    color: white;
+  }
+}
+
+// services
+
+.services {
+  text-align: center;
+  margin: 5rem 0;
+  img {
+    width: 4.5rem;
+  }
+  h5 {
+    font-weight: 500;
+    margin: 1.5rem 0;
+  }
+  p {
+    color: $text-color;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  .services-options {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 3rem 1rem;
+    margin-top: 2rem;
+    p {
+      margin-bottom: 3.5rem;
+      color: $text-color;
+      font-size: 1rem;
+    }
+  }
+  .btn {
+    @extend %btn;
+    margin: 1rem 0;
+  }
+}
+
+// solutions
+
+.solutions {
+  max-width: 100vw;
+  height: 80vh;
+  text-align: center;
+  p {
+    margin: 2rem 0 3rem 0;
+    color: $text-color;
+    font-size: 1.2rem;
+    width: 60%;
+  }
+  .btn {
+    @extend %btn;
+  }
+}
+
+// details
+
+.details {
+  height: 70vh;
+  text-align: center;
+  h3 {
+    font-weight: bold;
+    margin: 1.5rem 0;
+  }
+  p {
+    color: $text-color;
+    margin-bottom: 2rem;
+  }
+  .btn {
+    @extend %btn;
+  }
+  img {
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+}
+
+// quote
+.quote {
+  background-color: $primary-color;
+  color: white;
+  padding: 2rem 0;
+  p {
+    font-size: 0.9rem;
+  }
+  p:first-child {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 2rem;
+  }
+}
+// leader
+
+.leader {
+  height: 75vh;
+  img {
+    width: 100%;
+  }
+  p {
+    color: $text-color;
+  }
+}
+
+// client
+.client {
+  height: 40vh;
+  text-align: center;
+  margin-bottom: 4rem;
+  h3 {
+    margin-bottom: 4rem;
+  }
+  img {
+    width: 80%;
+    filter: grayscale(100%);
+    opacity: 0.4;
+  }
+  .client-logo {
+    flex: 0 1 15%;
+  }
+}
+
+// footer
+
+.footer {
+  height: 70vh;
+  background-color: $footer-color;
+  color: $footer-text-color;
+  padding: 4rem 0;
+  h6 {
+    color: $footer-text-color;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  .fas {
+    margin-right: 1rem;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
+  a {
+    color: $footer-text-color;
+  }
+  .fab {
+    margin-right: 1rem;
+  }
+  .footer-logo {
+    text-align: center;
+    margin-top: 3rem;
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}

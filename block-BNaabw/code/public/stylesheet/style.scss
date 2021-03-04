@@ -1,0 +1,201 @@
+@import "var";
+@import "reset";
+@import "general";
+@import "home";
+@import "about";
+@import "contact";
+@import "service";
+@import "price";
+
+// error page
+.error-404 {
+  p {
+    margin-top: 1rem;
+  }
+}
+.item-stretch {
+  align-items: stretch;
+}
+
+#toggle,
+.bar {
+  display: none;
+}
+.m-header-menu {
+  display: none;
+}
+
+// media queries
+
+@media screen and (max-width: 950px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    max-width: 650px;
+  }
+  .flex,
+  .flex1 {
+    flex-wrap: wrap;
+  }
+
+  .flex-48,
+  .flex-31,
+  .flex-35,
+  .flex-60,
+  .flex-24 {
+    flex: 1 1 100%;
+  }
+  .header-social-link {
+    text-align: center;
+  }
+  .m-header-link {
+    flex: 1 1 100%;
+    padding: 0.4rem 0;
+    align-items: center;
+    .flex1 {
+      justify-content: center;
+    }
+  }
+  .header-sub-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba($text-color, 0.8);
+    padding-top: 10rem;
+    z-index: 1000;
+  }
+
+  #toggle:checked ~ .header-sub-menu {
+    display: inline-block;
+  }
+  .bar {
+    font-size: 1.2rem;
+    display: inline-block;
+    color: white;
+    padding: 0.2rem 0.75rem;
+    border-radius: 4px;
+    background-color: $primary-color;
+    position: relative;
+    z-index: 1001;
+  }
+  .header-all-menu {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .header-all-menu li {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0;
+  }
+  .header-sub-menu a:nth-child(n) {
+    color: white;
+  }
+  .sub-menu {
+    display: none;
+  }
+  .sub-menu-bar .fas {
+    display: none;
+  }
+  .m-header-menu {
+    display: inline-block;
+  }
+  .details,
+  .quote,
+  .leader {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .details {
+    img {
+      margin: 3rem 0;
+    }
+  }
+  .quote {
+    text-align: center;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem 0;
+
+    p {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .btn {
+      margin: 0 auto;
+    }
+  }
+
+  .footer {
+    height: auto;
+  }
+  .footer-menu {
+    flex: 1 1 100%;
+  }
+  .footer-sub-menu {
+    flex: 1 1 48%;
+    margin: 2rem 0;
+  }
+
+  // about page
+  .about-hero,
+  .about-us,
+  .about-solutions,
+  .team {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  .about-hero {
+    padding: 2rem 0;
+  }
+  .about-us {
+    height: auto;
+    padding: 2rem 0;
+  }
+  .vision {
+    img {
+      width: 100%;
+    }
+  }
+  .m-flex-vision {
+    display: flex;
+    flex: 0 1 100%;
+    .fas {
+      flex: 0 0 0;
+    }
+  }
+  .m-service {
+    margin-bottom: 4rem;
+  }
+  .service-business {
+    height: auto;
+    margin: 4rem 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 300px;
+  }
+}

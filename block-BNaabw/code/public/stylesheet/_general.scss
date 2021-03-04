@@ -1,0 +1,76 @@
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.flex1 {
+  display: flex;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.flex-31 {
+  flex: 0 1 31.5%;
+}
+.flex-48 {
+  flex: 0 1 48%;
+}
+.flex-24 {
+  flex: 0 1 23%;
+}
+.flex-35 {
+  flex: 0 1 40%;
+}
+.flex-60 {
+  flex: 0 1 56%;
+}
+.center {
+  display: flex;
+  align-items: center;
+}
+.item-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.column {
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+body {
+  line-height: 1.5;
+  font-family: "Archivo", sans-serif;
+}
+$heading: 1;
+@while $heading<=6 {
+  h#{$heading} {
+    font-size: 3rem - ($heading * 0.25rem);
+    font-weight: bold;
+    color: $heading-color;
+  }
+  $heading: $heading + 1;
+}
+
+%btn {
+  border: 2px solid $btn-color;
+  border-radius: 2rem;
+  color: $btn-color;
+  padding: 0.75rem 1.5rem;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
