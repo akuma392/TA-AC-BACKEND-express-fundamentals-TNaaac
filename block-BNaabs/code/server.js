@@ -17,7 +17,14 @@ app.get('/new', (req, res) => {
 });
 app.post('/new', (req, res) => {
   console.log(req.body);
-  res.json(req.body);
+  //   res.json(req.body);
+  res.send(`
+     <h2> ${req.body.name} </h2>
+     <p> ${req.body.email} </p>
+     <p> ${req.body.age} </p>
+     <p> ${req.body.username} </p>
+    
+  `);
 });
 
 app.get('/users/:username', (req, res) => {
