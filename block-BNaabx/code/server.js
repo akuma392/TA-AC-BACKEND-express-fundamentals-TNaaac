@@ -39,19 +39,28 @@ app.use((req, res, next) => {
     next();
   });
 });
+// app.use((req, res, next) => {
+//   var extension = req.url.split('.').pop();
+//   console.log(extension);
+//   console.log('public' + req.url);
+//   if (['png', 'jpg', 'jpeg', 'svg'].includes(extension)) {
+//     res.setHeader('Content-Type', 'images/' + extension);
+//     fs.createReadStream('public' + req.url).pipe(res);
+//   } else if (req.url === '/style.css') {
+//     res.setHeader('Content-Type', 'text/css');
+//     // fs.createReadStream('stylesheet' + req.url).pipe(res);
+//     fs.readFileSync(__dirname + '/stylesheet/' + req.url, 'utf8');
+//   }
+//   next();
+// });
+
+var publicPath = __dirname + '/public';
 app.use((req, res, next) => {
-  var extension = req.url.split('.').pop();
-  console.log(extension);
-  console.log('public' + req.url);
-  if (['png', 'jpg', 'jpeg', 'svg'].includes(extension)) {
-    res.setHeader('Content-Type', 'images/' + extension);
-    fs.createReadStream('public' + req.url).pipe(res);
-  } else if (req.url === '/style.css') {
-    res.setHeader('Content-Type', 'text/css');
-    // fs.createReadStream('stylesheet' + req.url).pipe(res);
-    fs.readFileSync(__dirname + '/stylesheet/' + req.url, 'utf8');
-  }
-  next();
+  var filePath = publicPath + req.path;
+  fs.readFile(filePath, 'utf8', (err, file) => {
+    if (err) return next();
+    res.sendFile(filePath);
+  });
 });
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
